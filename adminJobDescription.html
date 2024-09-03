@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Job Details</title>
+ <link rel = "icon" href = "images/title-bar-logo.svg" type = "image/x-icon">
+
+
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/jobDescription.css">
+  <link rel="stylesheet" href="css/adminHome.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+</head>
+
+<body onload="onWindowLoad()">
+  <div id="loader"></div>
+
+  <div id="body-container" class="animate-bottom" style="display:none;">
+    <div class="header">
+      <a href="adminJobPosting.html" target="">
+        <img class="logo" src="images/Logo.svg" style="position: initial;top: 10px;">
+      </a>
+      <div class="topnav" id="myTopnav">
+        <a href="#"></a>
+        <a class="menu jobPost" href="adminJobPosting.html" target="_self">Post a Job</a>
+        <a class="menu details" href="adminUserDetails.html" target="_self">User Details</a>
+        <a class="menu UserHomePage" href="index.html">Go to Website</a>
+        <a href="#"><button type="button" class="logOut" onclick="logout()">LogOut</button></a>
+        <a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+    </div>
+
+    <!------------------- Body Content ------------------>
+
+    <!-------------Content --------------->
+    <div class="content">
+      <div class="content-block">
+        <h1 id="content-block-h1" style="margin: 0;"></h1>
+
+      </div>
+    </div>
+    <div class="content-block2">
+      <div id="block"></div>
+    </div>
+    <div id="uploadDetails"></div>
+    <!-- <p style="text-align: center;"><button class="back-button" type="button" onclick="back()">back</button></p> -->
+
+
+    <!----------------- Footer ------------>
+    <!----------------- Footer  ----------------->
+
+    <footer class="site-footer" style="position: absolute;">
+      <div class="block">
+        <div class="row">
+          <div class="col-sm-12 col-md-6" style="float: left;">
+            <div class="heading">
+              Get In Touch
+            </div>
+            <div class="contacts">
+              <ul>
+                <li>08572-222737</li>
+                <li style="background-image: url(images/msg.png);"><a href="contact.php">venkat@gvmshiring.com</a></li>
+              </ul>
+            </div>
+            <div class="cont">
+              <ul>
+                <li><a href="https://twitter.com/GVMSInfotech"><img src="images/twitter.png" width="24" height="24"></a>
+                </li>
+                <li><a href="https://www.facebook.com/pages/GVMS-Infotech-Pvt-Ltd/200102070468170?pnref=about.work"><img
+                      src="images/fb.png" width="24" height="24"></a></li>
+                <li><a href="https://plus.google.com/u/0/"><img src="images/g+.png" width="24" height="24"></a></li>
+                <li><a href="https://www.linkedin.com/company/gvms-infotech-pvt.ltd"><img src="images/l_in.png"
+                      width="24" height="24"></a></li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="col-xs-6 col-md-3" style="float: right; padding-right: 40px;">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="aboutUs.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="careers.html">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="block" style="margin-top: 150px;">
+        <hr>
+
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12" style="margin: auto;">
+            <p class="copyright-text" style="text-align: center;">© Copyright 2017 GVMS Infotech, All Rights Reserved.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons" style="text-align: center;">
+              <li><a class="twitter" href="https://twitter.com/GVMSInfotech"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="facebook"
+                  href="https://www.facebook.com/pages/GVMS-Infotech-Pvt-Ltd/200102070468170?pnref=about.work"><i
+                    class="fa fa-facebook"></i></a></li>
+              <li><a class="google" href="https://plus.google.com/u/0/"><i class="fa fa-google-plus"></i></a></li>
+              <li><a class="linkedin" href="https://www.linkedin.com/company/gvms-infotech-pvt.ltd"><i
+                    class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!------------------ Script  ---------->
+  <!-- <script type="module">
+
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+  
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDA1ZRp4zp3ovg99nJNo-P9rVePg5tDm9E",
+      authDomain: "gvmshiring-18bf9.firebaseapp.com",
+      projectId: "gvmshiring-18bf9",
+      storageBucket: "gvmshiring-18bf9.appspot.com",
+      messagingSenderId: "158111853248",
+      appId: "1:158111853248:web:9c18f5d886fc8a97b2db25"
+    };
+  
+    // Initialize Firebase
+    // const app = initializeApp(firebaseConfig);
+    firebase.initializeApp(firebaseConfig);
+  </script> -->
+
+  <script src="scripts/init-firebase.js"></script>
+  <script src="scripts/index.js"></script>
+  <script src="scripts/adminJobDescription.js"></script>
+  <script src="scripts/sharePost.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+html, body {
+margin: 0;
+padding: 0;
+font-family: 'Roboto', sans-serif;
+/* width: 100%;
+height: 100%; */
+}
+
+body {
+background: white;
+}
+
+.topnav .UserHomePage{
+border: 1px solid #053354;
+border-radius: 30px;
+padding: 5px;
+margin-top: 7px;
+cursor: pointer;
+}
+
+.topnav .UserHomePage:hover{
+background-color: #053354;
+color: white;
+}
+.topnav .logOut{
+background-color: transparent;
+color: #053354;
+border: none;
+padding: 10px;
+margin-top: -10px;
+font-size: 17px;
+cursor: pointer;
+font-weight: bold;
+}
+
+.topnav .logOut:hover{
+color: white;
+cursor: pointer;
+font-size: 17px;
+border-radius: 30px;
+background-color: #053354;
+}
+.content-block{
+padding: 20px;
+padding-bottom: 20px;
+}
+.postBtn{
+background-color: white;
+color: #243b55;
+font-weight: bold;
+border-radius: 30px;
+height: fit-content;
+padding: 15px;
+padding-left: 25px;
+padding-right: 25px;
+cursor: pointer;
+border: none;
+box-shadow: 0 0 5px #d8ac9c;
+font-size: 15px;
+/* margin-top: 25px; */
+}
+
+.postBtn:hover{
+background-color: #243b55;
+color: white;
+}
+
+.customTooltip {
+background-color: whitesmoke;
+border-radius: 10px;
+position: absolute;
+width: auto;
+height:fit-content;
+overflow: auto;
+cursor: all-scroll;
+z-index: 1;
+margin: auto;
+padding: 20px;
+top: 0;
+border: none;
+box-shadow: none;
+}
+
+#overlay {
+position: fixed;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0,0,0,0.7);
+z-index: 1;
+cursor: pointer;
+}
+
+.tooltip-desc .close-btn {
+cursor: pointer;
+right: 35px;
+text-align: right;
+font-size: 20px;
+position: absolute;
+top: 25px;
+margin: 0;
+}
+
+.tooltip-desc {
+overflow:auto;
+width: fit-content;
+height: fit-content;
+border: 5px solid #053354;
+padding: 20px;
+top: 0;
+}
+
+.tooltip-desc .form{
+display: block;
+justify-content: space-between;
+padding: 10px;
+}
+
+.tooltip-desc label{
+padding: 0;
+color: #053354;
+}
+
+input[type], select, textarea {
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+resize: vertical;
+}
+
+.tooltip-desc .submitBtn{
+margin-left: 25%;
+padding: 10px;
+padding-left: 40px;
+padding-right: 40px;
+font-size: 20px;
+border-radius: 40px;
+background-color: teal;
+color:white;
+border: white ;
+cursor: pointer;
+width: auto;
+}
+
+.tooltip-desc .submitBtn:hover{
+background-color: rgb(68, 202, 202);
+}
+
+/**************** Tool Tip ******************/
+@media (min-width: 1201px) {
+.topnav .UserHomePage{
+margin-left: 10px;
+}
+.customTooltip {
+margin-left: 35%;
+}
+.form input[type=file]{
+width: 170px;
+}
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px){
+.topnav .UserHomePage{
+margin-left: 10px;
+}
+.customTooltip {
+margin-left: 30%;
+}
+.form input[type=file]{
+width: 170px;
+}
+}
+
+@media screen and (max-width: 1024px){
+.topnav .UserHomePage{
+width: fit-content;
+margin: auto;
+border: 1px solid white;
+margin-top: 10px;
+}
+
+.topnav .logOut{
+color: white;
+border: 1px solid white;
+border-radius: 30px;
+margin-top: 5px;
+padding: 6px;
+}
+.customTooltip {
+margin-left: 30%;
+}
+.form input[type=file]{
+width: 170px;
+}
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+.content-block h1{
+margin: revert;
+text-align: left;
+}
+.content-block .heading{
+display: none;
+}
+.customTooltip {
+margin-left: 6%;
+}
+.form input[type=file]{
+display: grid;
+width: 100px;
+}
+}
+
+@media only screen and (min-device-width : 540px) and (max-device-width : 720px) {
+.content-block .heading{
+display: none;
+}
+.customTooltip {
+margin-left: 26%;
+}
+.form input[type=file]{
+display: grid;
+width: 100px;
+}
+}
+/******************** UserDetails Page CSS ********************/
+
+.tableContent{
+height: max-content;
+overflow: auto;
+}
+
+#jobDescription{
+width: 100%;
+height: max-content;
+background-color: white;
+}
+
+#tableData{
+width: 100%;
+height: max-content;
+background-color: white;
+}
+
+h2{
+text-decoration: underline;
+}
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+color: white;
+}
+
+td, th {
+border: 1px solid black;
+text-align: center;
+padding: 8px;
+}
+th{
+background-color: white;
+color:#243b55 ;
+/* text-align: center; */
+}
+td{
+background-color: #243b55;
+}

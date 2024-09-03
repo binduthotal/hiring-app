@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/title-bar-logo.svg" type="image/x-icon">
+
+    <title>User Details</title>
+    <link rel="stylesheet" href="css/adminHome.css">
+    <link rel="stylesheet" href="css/adminUserDetails.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+</head>
+
+<body>
+    <!------------------- Header  ---------------->
+    <!------------------- Header  ---------------->
+    <div class="header">
+        <a href="adminJobPosting.html" target="">
+            <img class="logo" src="images/Logo.svg" style="position: initial;top: 10px;">
+        </a>
+        <div class="topnav" id="myTopnav">
+            <a href="#"></a>
+            <a class="menu jobPost" href="adminJobPosting.html" target="_self">Post a Job</a>
+            <a class="menu details" href="adminUserDetails.html" target="_self">User Details</a>
+            <a class="menu UserHomePage" href="index.html">Go to Website</a>
+            <a href="#"><button type="button" class="logOut" onclick="logout()">LogOut</button></a>
+            <a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-block" style="padding: 0;">
+            <h1>User details applied for jobs: </h1>
+        </div>
+    </div>
+    <div class="tableContent">
+        <div id="jobDescription">
+            <!-- <h2>Job Description:</h2> -->
+            <!-- <h3>Company Name:</h3> -->
+            <table id="table">
+                <tr>
+                    <th>Company</th>
+                    <th>Position</th>
+                    <th>Name</th>
+                    <th>Email Id</th>
+                    <th>Phone No</th>
+                    <th>Resume</th>
+                </tr>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="pagenumbers" id="pagination"></div>
+
+    <!-- <script type="module">
+
+    // Import the functions you need from the SDKs you need
+    // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+    import firebase from 'firebase/app';
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyBUjecdkpZlzK-qB_v_sG3RCCWwVmTaXgE",
+        authDomain: "gvmshiring-36930.firebaseapp.com",
+        databaseURL: "https://gvmshiring-36930-default-rtdb.firebaseio.com",
+        projectId: "gvmshiring-36930",
+        storageBucket: "gvmshiring-36930.appspot.com",
+        messagingSenderId: "590471683465",
+        appId: "1:590471683465:web:adcb6fe4d42387a2f91558"
+    };
+    // Initialize Firebase
+    // const app = initializeApp(firebaseConfig);
+    firebase.initializeApp(firebaseConfig);
+  </script> -->
+
+    <script src="scripts/init-firebase.js"></script>
+    <script src="scripts/adminUserDetails.js"></script>
+    <script src="scripts/index.js"></script>
+
+</body>
+
+</html>

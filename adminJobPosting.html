@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="images/title-bar-logo.svg" type="image/x-icon">
+  <title>GVMS Job Posting</title>
+
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/careers.css">
+  <link rel="stylesheet" href="css/adminHome.css">
+  <!-- <link rel="stylesheet" href="css/adminJobPosting.css"> -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+</head>
+
+<body onload="onWindowLoad()">
+  <div id="loader"></div>
+
+  <div id="body-container" class="animate-bottom" style="display:none;">
+    <!------------------- Header  ---------------->
+    <div class="header">
+      <a href="adminJobPosting.html" target="">
+        <img class="logo" src="images/Logo.svg" style="position: initial;top: 10px;">
+      </a>
+      <div class="topnav" id="myTopnav">
+        <a href="#"></a>
+        <a class="jobPost" href="adminJobPosting.html" target="_self">Home</a>
+        <a class="details" href="adminUserDetails.html" target="_self">User Details</a>
+        <a class="UserHomePage" href="index.html">Go to Website</a>
+        <a href="#"><button type="button" class="logOut" onclick="logout()">LogOut</button></a>
+        <a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+    </div>
+    <div class="content">
+      <div class="content-block" style="margin:auto;width: auto;">
+        <!-- <h1 class="heading">Post a Job</h1> -->
+        <button type="button" class="postBtn" onclick="enterJobDetails()">Click here to enter job details</button>
+      </div>
+    </div>
+    <div id="jobTooltip" style="margin: auto;"></div>
+
+    <div class="content-block2">
+      <div class="table-heading" style="padding-left: 30px;padding-right: 30px;padding-top: 10px;">
+        <div class="box">
+          <div class="row-details" style="padding-bottom: 35px;padding-top: 35px;">
+            <div class="col col-1">
+              <p><span style="font-weight: bold;color: #006aa5;">Company</span></p>
+            </div>
+            <div class="col col-2">
+              <p><span style="font-weight: bold;color: #006aa5;">Location</span></p>
+            </div>
+            <div class="col col-3">
+              <p><span style="font-weight: bold;color: #006aa5;">Position</span></p>
+            </div>
+            <div class="col col-4">
+              <p><span style="font-weight: bold;color: #006aa5;">Details</span></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div id="block"></div>
+      <div class="pagenumbers" id="pagination"></div>
+    </div>
+    <!----------------- Footer  ----------------->
+    <footer class="site-footer" style="position: absolute;">
+      <div class="block">
+        <div class="row">
+          <div class="col-sm-12 col-md-6" style="float: left;">
+            <div class="heading">
+              Get In Touch
+            </div>
+            <div class="contacts">
+              <ul>
+                <li>08572-222737</li>
+                <li style="background-image: url(images/msg.png);"><a href="contact.php">venkat@gvmshiring.com</a></li>
+              </ul>
+            </div>
+            <div class="cont">
+              <ul>
+                <li><a href="https://twitter.com/GVMSInfotech"><img src="images/twitter.png" width="24" height="24"></a>
+                </li>
+                <li><a href="https://www.facebook.com/pages/GVMS-Infotech-Pvt-Ltd/200102070468170?pnref=about.work"><img
+                      src="images/fb.png" width="24" height="24"></a></li>
+                <li><a href="https://plus.google.com/u/0/"><img src="images/g+.png" width="24" height="24"></a></li>
+                <li><a href="https://www.linkedin.com/company/gvms-infotech-pvt.ltd"><img src="images/l_in.png"
+                      width="24" height="24"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-md-3" style="float: right; padding-right: 40px;">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="aboutUs.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="careers.html">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="block" style="margin-top: 180px;">
+        <hr>
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12" style="margin: auto;">
+            <p class="copyright-text" style="text-align: center;">© Copyright 2017 GVMS Infotech, All Rights Reserved.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons" style="text-align: center;">
+              <li><a class="twitter" href="https://twitter.com/GVMSInfotech"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="facebook"
+                  href="https://www.facebook.com/pages/GVMS-Infotech-Pvt-Ltd/200102070468170?pnref=about.work"><i
+                    class="fa fa-facebook"></i></a></li>
+              <li><a class="google" href="https://plus.google.com/u/0/"><i class="fa fa-google-plus"></i></a></li>
+              <li><a class="linkedin" href="https://www.linkedin.com/company/gvms-infotech-pvt.ltd"><i
+                    class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!----------- script -------------->
+  <!-- <script type="module">
+
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBUjecdkpZlzK-qB_v_sG3RCCWwVmTaXgE",
+
+authDomain: "gvmshiring-36930.firebaseapp.com",
+
+databaseURL: "https://gvmshiring-36930-default-rtdb.firebaseio.com",
+
+projectId: "gvmshiring-36930",
+
+storageBucket: "gvmshiring-36930.appspot.com",
+
+messagingSenderId: "590471683465",
+
+appId: "1:590471683465:web:adcb6fe4d42387a2f91558"
+
+    };
+    // Initialize Firebase
+    // const app = initializeApp(firebaseConfig);
+    firebase.initializeApp(firebaseConfig);
+  </script> -->
+
+  <script src="scripts/init-firebase.js"></script>
+  <script src="scripts/adminJobPosting.js"></script>
+  <script src="scripts/index.js"></script>
+  <script src="scripts/careers.js"></script>
+  <script src="scripts/adminJobPostingLearnMore.js"></script>
+
+
+</body>
+
+</html>

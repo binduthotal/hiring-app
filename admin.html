@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel="icon" href="images/title-bar-logo.svg" type="image/x-icon">
+  <title>GVMS Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/adminLogin.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+
+<!-- <script defer src="./init-firebase.js"></script> -->
+
+
+  <!-- <script src="/node_modules/firebase/firebase-app.js"></script>
+  <script src="/node_modules/firebase/firebase-auth.js"></script>
+  <script src="/node_modules/firebase/firebase-database.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.2.2/firebase-app.min.js"></script> -->
+
+
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+</head>
+
+<body>
+
+  <!-- <p style="position: absolute;top:0;">
+    <img class="logo" src="images/GVMS-LOGO.svg" style="position: initial; top: 10px;width: 100%;">
+  </p> -->
+  <!-- <div class="header">
+    
+    <h1>Welcome Admin</h1>
+  </div>
+  <div class="login-box">
+    <h2>Login</h2>
+    <form class="form">
+      <div class="user-box">
+        <input class="input" type="text" id="userId" value="admin" required="">
+        <label class="label" for="">Username</label>
+      </div> -->
+  <!-- /.user-box -->
+  <!-- <div class="user-box">
+        <input class="input" type="password" id="pswrd" value="admin" required="">
+        <label class="label" for="">Password</label>
+      </div> -->
+  <!-- /.user-box -->
+  <!-- <button type="button" class="login" onclick="login()"><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </button>
+    </form> -->
+  <!-- /form -->
+  <!-- </div> -->
+  <!-- /.login-box -->
+  <div class="header">
+    <h4 style="text-align: center; background-color: white; margin: 0;"><img id="logo" src="images/Logo.svg"
+        style="width: 30%;"></h4>
+    <h1 style="text-align: center; color: white;">Welcome to admin</h1>
+  </div>
+
+  <div id="firebaseui-auth-container"></div>
+  <div id="loader">Loading...</div>
+  <!------------------ Script  ---------->
+
+  <!-- <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+    // import { initializeApp } from "/firebase/app";
+    // import { getAuth, createUserWithEmailAndPassword } from "/node_modules/firebase/auth";
+
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBUjecdkpZlzK-qB_v_sG3RCCWwVmTaXgE",
+      authDomain: "gvmshiring-36930.firebaseapp.com",
+      databaseURL: "https://gvmshiring-36930-default-rtdb.firebaseio.com",
+      projectId: "gvmshiring-36930",
+      storageBucket: "gvmshiring-36930.appspot.com",
+      messagingSenderId: "590471683465",
+      appId: "1:590471683465:web:adcb6fe4d42387a2f91558"
+    };
+
+    // Initialize Firebase
+    // const app = initializeApp(firebaseConfig);
+    // var firebaseOther = firebase.initializeApp(firebaseConfig, "firebaseOther");
+    firebase.initializeApp(firebaseConfig);
+
+  </script> -->
+
+  <script src="scripts/init-firebase.js"></script>
+  <script src="scripts/admin.js"></script>
+
+</body>
+
+</html>

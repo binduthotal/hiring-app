@@ -1,0 +1,168 @@
+.content{
+display: block;
+}
+.content-block{
+width: auto;
+padding-bottom: 10px;
+}
+
+.content-block h1{
+text-align: center;
+margin: auto;
+}
+
+.forms{
+display: flex;
+padding-bottom: 30px;
+/* margin: auto; */
+}
+span{
+display: flex;
+}
+
+.enquiry-form label{
+    font-size: 15px;
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+    width: max-content;
+    padding-top: 10px;
+    }
+
+input[type], select, textarea {
+width: max-content;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+/* margin-top: 6px; */
+margin-bottom: 16px;
+resize: vertical;
+margin-right: 20px;
+padding-right: 20px;
+}
+
+/* input[type=text], select, textarea {
+width: max-content;
+padding: 7px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: vertical;
+margin-right: 10px;
+}
+
+input[type=tel], select, textarea {
+padding: 7px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 10px;
+resize:vertical;
+}
+
+
+input[type=email], select, textarea {
+width: max-content;
+padding: 7px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: vertical;
+} */
+
+input[type=submit] {
+background-color: #04AA6D;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+margin-left: 120px;
+}
+
+input[type=submit]:hover {
+background-color: #45a049;
+}
+
+.enquiry-form {
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 10px;
+width: max-content;
+margin: auto;
+margin-top: 30px;
+margin-bottom: 30px;
+}
+
+.contact-form {
+width: max-content;
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 17px;
+margin: auto;
+/* margin-left: 50px; */
+margin-top: 30px;
+margin-bottom: 30px;
+
+}
+
+iframe{
+height: 350px;
+}
+
+address{
+word-spacing: 3px;
+line-height: 20px;
+}
+
+/********************************* Media Queries *************************************/
+
+/* Media Query for Large screens */
+/* @media (min-width: 1201px) */
+@media (min-width: 1201px) {
+.contact-form{
+margin-left: 50px;
+}
+}
+
+/* (min-width: 1025px) and (max-width: 1200px) */
+@media only screen and (min-width: 1025px) and (max-width: 1200px){
+.contact-form{
+margin-left: 50px;
+}
+}
+
+/* @media screen and (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+.forms{
+display: flex;
+}
+.contact-form{
+margin-left: 50px;
+}
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+.forms{
+display: block;
+}
+.contact-form{
+margin-left: auto;
+}
+}
+
+@media only screen and (min-device-width : 540px) and (max-device-width : 720px) {
+.forms{
+display: block;
+}
+.contact-form{
+margin-left: auto;
+}
+}

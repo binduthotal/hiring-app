@@ -1,0 +1,288 @@
+body{
+overflow: auto;
+background: white;
+}
+/* ***************** PRELOADER ******************* */
+#bg{
+background: transparent linear-gradient(
+180deg
+,#053354 0,#006aa5 100%) 0 0 no-repeat padding-box;
+}
+#loader {
+position: absolute;
+left: 45%;
+top: 40%;
+z-index: 1;
+width: 30px;
+height: 30px;
+border: 16px solid #053354;
+border-radius: 50%;
+border-top: 16px solid #11e2e2;
+-webkit-animation: spin 2s linear infinite;
+animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+0% { -webkit-transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+/* Add animation to "page content" */
+.animate-bottom {
+position: relative;
+-webkit-animation-name: animatebottom;
+-webkit-animation-duration: 1s;
+animation-name: animatebottom;
+animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+from { bottom:-100px; opacity:0 }
+to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+from{ bottom:-100px; opacity:0 }
+to{ bottom:0; opacity:1 }
+}
+
+/* header */
+.header{
+height: fit-content;
+}
+/********************** content ****************************/
+
+.content-block {
+padding-bottom: 10px;
+}
+
+.content-block2{
+height: fit-content;
+margin: auto;
+padding-left: 50px;
+padding-right: 70px;
+}
+
+.content-block2 #block{
+margin: auto;
+height: fit-content;
+position: relative;
+padding: 30px;
+}
+.box{
+width: 100%;
+font-family: 'Roboto', sans-serif;
+background-color: white;
+border-radius: 4px;
+/* font-weight: normal; */
+padding: 15px;
+}
+.box h2{
+/* font-family: 'Roboto', sans-serif; */
+font-family: 'Arial', sans-serif;
+}
+
+.box p {
+/* font-family: Roboto, sans-serif; */
+line-height: 40px;
+word-spacing: 7px;
+letter-spacing: 0.2px;
+font-weight: 400;
+/* word-wrap: break-word; */
+color: rgb(68, 66, 66);
+}
+.box p{
+margin: 1px;
+}
+
+p.textArea{
+-moz-hyphens:auto;
+-ms-hyphens:auto;
+-webkit-hyphens:auto;
+hyphens:auto;
+word-wrap:break-word;
+}
+
+.back-button{
+background-color: teal;
+color: white;
+border: white solid 2px;
+border-radius: 30px;
+padding: 10px;
+font-weight: bold;
+font-size: 17px;
+padding-left: 15px;
+padding-right: 15px;
+cursor: pointer;
+}
+.back-button:hover{
+background-color: #11e2e2;
+color: white;
+border: white solid 1px;
+}
+.button{
+padding: 10px;
+border: none;
+color: white;
+background-color: transparent;
+border-radius: 30px;
+border: #11e2e2 solid 1px;
+font-family: Arial, sans-serif;
+font-size: 15px;
+font-weight: 600;
+background-color: teal;
+cursor: pointer;
+margin-top: 15px;
+}
+
+.share-button{
+margin-left: 40px;
+border: none;
+background-color: transparent;
+font-size: 22px;
+font-weight: normal;
+color: teal;
+cursor: pointer;
+}
+
+.button:hover{
+background-color: #4ABDAC;
+color: white;
+border: white solid 1px;
+}
+
+/********************* Apply Tool Tip ************************/
+/* #overlay {
+position: fixed;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0,0,0,0.3);
+z-index: 1;
+cursor: pointer;
+overflow: auto;
+}
+
+.customTooltip {
+background-color: whitesmoke;
+border-radius: 10px;
+position: absolute;
+width: auto;
+height:fit-content;
+overflow: auto;
+cursor: all-scroll;
+z-index: 1;
+margin: auto;
+padding: 20px;
+top: 0;
+border: none;
+box-shadow: none;
+}
+
+.tooltip-desc .close-btn {
+margin: 0;
+margin-top: 8px;
+cursor: pointer;
+margin-right: 20px;
+text-align: right;
+font-size: 20px;
+}
+
+.tooltip-desc {
+overflow:auto;
+width: fit-content;
+height: fit-content;
+border: 5px solid #053354;
+padding: 20px;
+top: 0;
+}
+
+.tooltip-desc .form{
+display: flex;
+padding: 15px;
+}
+
+.tooltip-desc label{
+padding: 0;
+color: #053354;
+}
+
+.form input, select, textarea {
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+resize: vertical;
+}
+
+.tooltip-desc .submitResumeBtn{
+margin-left: 30%;
+margin-bottom: 30px;
+margin-top: 10px;
+padding: 10px;
+padding-left: 40px;
+padding-right: 40px;
+font-size: 20px;
+border-radius: 40px;
+background-color: teal;
+color:white;
+border: white ;
+} */
+
+@media (min-width: 1201px) {
+.customTooltip{
+margin-left: 35%;
+}
+
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px){
+
+.customTooltip{
+margin-left: 30%;
+}
+
+}
+
+@media screen and (max-width: 1024px) {
+.customTooltip{
+margin-left: 30%;
+}
+.content-block2 #block {
+padding: 0;
+}
+.content-block2 {
+height: fit-content;
+margin: auto;
+padding-left: 30px;
+padding-right: 30px;
+}
+.box{
+padding: auto;
+}
+
+br{
+display: none;
+}
+
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+.customTooltip{
+margin: auto;
+}
+}
+
+@media only screen and (min-device-width : 540px) and (max-device-width : 720px) {
+.customTooltip{
+margin: auto;
+}
+}

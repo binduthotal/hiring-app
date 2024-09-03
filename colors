@@ -1,0 +1,12 @@
+overlay: rgba(0,0,0,0.7)
+
+a:hover : #00feff
+
+contact:hover : #4ABDAC
+
+font color : #243b55
+
+background : #053354 , #006aa5
+
+footer:#26272b , #737373 , #006bca ,#525252 ,  #3366cc , #fff , #bbb , icon: #33353d
+

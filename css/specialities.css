@@ -1,0 +1,228 @@
+body{
+    margin: 0;
+    background-color: black;
+    font-family: "Gill Sans", sans-serif;
+    font-family:  Verdana,sans-serif;
+    }
+
+    .content-block{
+        padding-bottom: 10px;
+    }
+
+.specialities-list-block ul {
+    list-style: none;
+  }
+  
+  .specialities-list-block ul li::before {
+    content: "\2713";
+    color: goldenrod;
+    word-spacing: 2px;
+    display: inline-block; width: 1em;
+  margin-left: -1em;
+    margin-left: 20px;
+  }
+
+.specialities-list-block ul li{
+    padding: 5px;
+    color: white;
+    line-height: 1.5;
+        word-spacing: 4px;
+        letter-spacing: 1px;
+        font-weight:lighter;
+}
+
+/********************************* Media Queries *************************************/
+    /* Media Query for Large screens */
+    /* @media (min-width: 1201px) */
+    @media (min-width: 1201px) {
+        .specialities-list-block{
+            display: flex;
+            font-family:Gill Sans", sans-serif";
+            font-size: 18px;
+            width: max-content;
+        }
+        .col-1{
+            padding: 20px;
+            margin: 30px;
+            margin-top: 40px;
+            width: max-content;
+            height: max-content;
+            position: relative;
+            background-color:rgb(43, 42, 42);
+            border: 2px solid whitesmoke ;
+        }
+        .col-2{
+            padding: 20px;
+            margin: 30px;
+            margin-top: 40px;
+            width: max-content;
+            height: max-content;
+            background-color:rgb(43, 42, 42);
+            position: relative;
+            border: 2px solid whitesmoke ;
+            margin-bottom: 25px;
+        
+        }
+    }
+
+/* (min-width: 1025px) and (max-width: 1200px) */
+@media only screen and (min-width: 1025px) and (max-width: 1200px){
+    .specialities-list-block{
+        display: flex;
+        font-family:Gill Sans", sans-serif";
+        font-size: 18px;
+        width: max-content;
+    }
+    .col-1{
+        padding: 20px;
+        margin: 30px;
+        margin-top: 40px;
+        width: max-content;
+        height: max-content;
+        position: relative;
+        background-color:rgb(43, 42, 42);
+        border: 2px solid whitesmoke ;
+    }
+    .col-2{
+        padding: 20px;
+        margin: 30px;
+        margin-top: 40px;
+        width: max-content;
+        height: max-content;
+        background-color:rgb(43, 42, 42);
+        position: relative;
+        border: 2px solid whitesmoke ;
+        margin-bottom: 25px;
+    
+    }
+}
+
+/* @media screen and (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .specialities-list-block{
+    display: block;
+    font-family:Gill Sans", sans-serif";
+    font-size: 18px;
+    /* width: max-content; */
+}
+.col-1 {
+    padding: 20px;
+    margin-top: 40px;
+    position: relative;
+    background-color: rgb(43, 42, 42);
+    border: 2px solid whitesmoke;
+}
+
+.col-2{
+    padding: 20px;
+    margin-top: 40px;
+    background-color:rgb(43, 42, 42);
+    position: relative;
+    border: 2px solid whitesmoke ;
+    margin-bottom: 25px;
+
+}
+}
+
+/* @media only screen and (min-width: 960px) and (max-width: 1024px){
+    .specialities-list-block{
+        display: block;
+        font-family:Gill Sans", sans-serif";
+        font-size: 18px;
+    }
+    .col-1 {
+        padding: 20px;
+        margin-top: 40px;
+        position: relative;
+        background-color: rgb(43, 42, 42);
+        border: 2px solid whitesmoke;
+    }
+    .col-2{
+        padding: 20px;
+        margin-top: 40px;
+        background-color:rgb(43, 42, 42);
+        position: relative;
+        border: 2px solid whitesmoke ;
+        margin-bottom: 25px;
+    
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 960px){
+    .specialities-list-block{
+        display: block;
+        font-family:Gill Sans", sans-serif";
+        font-size: 18px;
+    }
+    .col-1 {
+        padding: 20px;
+        margin-top: 40px;
+        position: relative;
+        background-color: rgb(43, 42, 42);
+        border: 2px solid whitesmoke;
+    }
+
+    .col-2{
+        padding: 20px;
+        margin-top: 40px;
+        background-color:rgb(43, 42, 42);
+        position: relative;
+        border: 2px solid whitesmoke ;
+        margin-bottom: 25px;
+    
+    }
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+    .specialities-list-block{
+        display: block;
+        font-family:Gill Sans", sans-serif";
+        font-size: 18px;
+    }
+
+    .col-1 {
+        padding: 20px;
+        margin-top: 40px;
+        position: relative;
+        background-color: rgb(43, 42, 42);
+        border: 2px solid whitesmoke;
+    }
+
+    .col-2{
+        padding: 20px;
+        margin-top: 40px;
+        background-color:rgb(43, 42, 42);
+        position: relative;
+        border: 2px solid whitesmoke ;
+        margin-bottom: 25px;
+    
+    }
+
+}
+
+@media only screen and (min-width: 240px) and (max-width: 480px){
+    .specialities-list-block{
+        display: block;
+        font-family:Gill Sans", sans-serif";
+        font-size: 18px;
+    }
+    .col-1 {
+        padding: 20px;
+        margin-top: 40px;
+        position: relative;
+        background-color: rgb(43, 42, 42);
+        border: 2px solid whitesmoke;
+    }
+
+    .col-2{
+        padding: 20px;
+        margin-top: 40px;
+        background-color:rgb(43, 42, 42);
+        position: relative;
+        border: 2px solid whitesmoke ;
+        margin-bottom: 25px;
+    
+    }
+} */
+

@@ -1,0 +1,31 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */ .bgImage{
+display: none;
+}
+}
+
+@media only screen and (min-device-width : 540px) and (max-device-width : 720px) {
+/* Styles */ .bgImage{
+display: none;
+}
+}
+/* Media Query for Large screens */
+/* @media (min-width: 1201px) */
+@media (min-width: 1201px) {
+
+}
+
+/* (min-width: 1025px) and (max-width: 1200px) */
+@media only screen and (min-width: 1025px) and (max-width: 1200px){
+.bgImage{
+margin-top: 25px;
+}
+}
+
+/* @media screen and (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+.bgImage{
+margin-top: 80px;
+}
+}
