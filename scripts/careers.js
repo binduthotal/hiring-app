@@ -95,7 +95,6 @@ function onWindowLoad() {
           return strVar;
 
         }
-        // item_element.innerText = item;
 
         wrapper.appendChild(item_element);
       }
